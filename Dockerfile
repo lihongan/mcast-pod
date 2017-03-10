@@ -6,4 +6,4 @@ RUN apt-get update \
     && rm -rf /var/lib/apt/lists/*
 COPY omping /usr/bin/omping
 
-ENTRYPOINT ["/usr/sbin/smcroute -n -d"]
+CMD ["/usr/sbin/smcroute","-n","-d"]
