@@ -6,5 +6,5 @@ RUN apt-get update \
     && rm -rf /var/lib/apt/lists/*
 COPY omping /usr/local/bin/omping
 COPY myscript.sh /usr/local/bin/myscript.sh
-RUN ["chmod", "+x", "/usr/local/bin/*"]
+RUN ["chmod", "+x", "/usr/local/bin/omping /usr/local/bin/myscript.sh"]
 CMD ["/usr/local/bin/myscript.sh"]
