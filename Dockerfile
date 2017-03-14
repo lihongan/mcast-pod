@@ -4,8 +4,7 @@ MAINTAINER Hongan Li <hongli@redhat.com>
 RUN apt-get update \
     && apt-get install -y net-tools tcpdump iperf smcroute \
     && rm -rf /var/lib/apt/lists/*
-RUN ["mv", "/usr/sbin/smcroute", "/usr/local/bin/smcroute"]
-COPY omping /usr/bin/omping
+COPY omping /usr/local/bin/omping
 COPY myscript.sh /usr/local/bin/myscript.sh
-RUN ["chmod", "+x", "/usr/local/bin/myscript.sh"]
+RUN ["chmod", "+x", "/usr/local/bin/*"]
 CMD ["/usr/local/bin/myscript.sh"]
