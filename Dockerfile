@@ -6,4 +6,4 @@ RUN apt-get update \
     && rm -rf /var/lib/apt/lists/*
 COPY omping /usr/bin/omping
 COPY myscript.sh /usr/local/bin/myscript.sh
-CMD ["sh", "-c", "/usr/local/bin/myscript.sh"]
+CMD ["/usr/local/bin/myscript.sh"]
