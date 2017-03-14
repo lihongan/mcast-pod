@@ -7,5 +7,5 @@ RUN apt-get update \
 RUN ["mv", "/usr/sbin/smcroute", "/usr/local/bin/smcroute"]
 COPY omping /usr/bin/omping
 COPY myscript.sh /usr/local/bin/myscript.sh
-RUN ["chmod", "+x", "/usr/local/bin/myscript.sh”]
+RUN ["chmod", "+x", "/usr/local/bin/myscript.sh"]
 CMD ["/usr/local/bin/myscript.sh"]
