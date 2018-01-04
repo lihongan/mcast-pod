@@ -2,7 +2,7 @@ FROM debian:latest
 MAINTAINER Hongan Li <hongli@redhat.com>
 # install binary and remove cache
 RUN apt-get update \
-    && apt-get install -y net-tools tcpdump iperf smcroute \
+    && apt-get install -y curl net-tools tcpdump iperf smcroute \
     && rm -rf /var/lib/apt/lists/*
 COPY omping /usr/local/bin/omping
 COPY myscript.sh /usr/local/bin/myscript.sh
